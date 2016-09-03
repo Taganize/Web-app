@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html ng-app="joinly">
 	<head>
+		<base href="/">
 		<title>Taganize - Business Cards</title>
 
 		<meta name="keywords" content="interactive, video, platform, marketing, business">
@@ -28,19 +29,22 @@
 		<script>
 		  // Initialize Firebase
 		  var config = {
-		    apiKey: "AIzaSyAaIzz92iSMoURRai_c7Am6wU_z_dYvdGk",
-		    authDomain: "opinionapp-389e4.firebaseapp.com",
-		    databaseURL: "https://opinionapp-389e4.firebaseio.com",
-		    storageBucket: "opinionapp-389e4.appspot.com",
+		    apiKey: "AIzaSyA6FhCEy2kAJZYIcf88bM9dAW0WkGYpzHc",
+		    authDomain: "taganize-4fdf4.firebaseapp.com",
+		    databaseURL: "https://taganize-4fdf4.firebaseio.com",
+		    storageBucket: "taganize-4fdf4.appspot.com",
 		  };
 		  firebase.initializeApp(config);
+
+			firebase.database().ref("/tags/909090").on("value", function(snapshot){
+				console.log(snapshot.val());
+			})
 		</script>
 
 	</head>
   <body>
 		<!--Import jQuery before materialize.js-->
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-		<script type="text/javascript" src="js/materialize.min.js"></script>
 
 		<nav>
 		  <div class="navbar-wrapper container">
