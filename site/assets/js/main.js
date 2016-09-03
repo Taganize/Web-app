@@ -8,14 +8,35 @@ var app = angular.module('joinly', ['ngRoute']);
 app.config(function($routeProvider) {
     $routeProvider
     .when('/', {
-        templateUrl: 'templates/home.html',
-        controller: 'homeCtrl'
+        templateUrl: 'templates/login.html',
+        controller: 'loginCtrl'
+    })
+    .when('/signup', {
+        templateUrl: 'templates/signup.html',
+        controller: 'signupCtrl'
+    })
+    .when('/tags', {
+        templateUrl: 'templates/tags.html',
+        controller: 'tagsCtrl'
+    })
+    .when('/', {
+        templateUrl: 'templates/design.html',
+        controller: 'designCtrl'
     })
     .otherwise({
     		redirectTo: '/'
     });
 });
 
-app.controller('homeCtrl', function($scope) {
+app.controller('loginCtrl', function($scope) {
+
+});
+app.controller('signupCtrl', function($scope) {
+
+});
+app.controller('tagsCtrl', function($scope) {
+
+});
+app.controller('designCtrl', function($scope) {
 
 });

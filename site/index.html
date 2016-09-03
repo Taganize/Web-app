@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html ng-app="joinly">
 	<head>
-		<title>Interactive Video</title>
+		<title>Taganize - Business Cards</title>
 
 		<meta name="keywords" content="interactive, video, platform, marketing, business">
 		<meta name="description" content="Hello World">
@@ -24,28 +24,35 @@
 		<script src="assets/js/alertify.js" charset="utf-8"></script>
 		<link rel="stylesheet" href="assets/css/alertify.css" charset="utf-8">
 
-		<script src="http://popcornjs.org/code/dist/popcorn-complete.js"></script>
-
-    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
-    <script>
-      // Initialize Firebase
-      firebase.initializeApp({
-        apiKey: "AIzaSyAnXPYZpmzRJfXnYAcHVXYOyEReD4KNbOE",
-        authDomain: "interactive-video-project.firebaseapp.com",
-        databaseURL: "https://interactive-video-project.firebaseio.com",
-				storageBucket: "interactive-video-project.appspot.com"
-      });
-
-			var storage = firebase.storage();
-			var storageRef = storage.ref();
-
-    </script>
+		<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+		<script>
+		  // Initialize Firebase
+		  var config = {
+		    apiKey: "AIzaSyAaIzz92iSMoURRai_c7Am6wU_z_dYvdGk",
+		    authDomain: "opinionapp-389e4.firebaseapp.com",
+		    databaseURL: "https://opinionapp-389e4.firebaseio.com",
+		    storageBucket: "opinionapp-389e4.appspot.com",
+		  };
+		  firebase.initializeApp(config);
+		</script>
 
 	</head>
   <body>
+		<!--Import jQuery before materialize.js-->
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="js/materialize.min.js"></script>
+
+		<nav>
+		  <div class="navbar-wrapper container">
+		    <a href="/" class="brand-logo">Taganize</a>
+
+		  </div>
+		</nav>
+
     <div ng-app="app">
   		<ng-view></ng-view>
 	  </div>
+
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28//angular-route.min.js"></script>
     <script src="assets/js/main.js"></script>
