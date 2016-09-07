@@ -1,0 +1,42 @@
+
+<div class="container" >
+    <div class="row">
+
+      <div class="col s12 m4">
+        <div class="card small valign-wrapper">
+          <div class="action-btn valign" style="margin:auto;" >
+            <a class="btn-floating btn-large red" >
+              <i class="large material-icons">add</i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col s12 m4" ng-repeat="tag in tagsFromDatabase">
+       <div class="card small">
+         <div class="card-image waves-effect waves-block waves-light">
+           <img class="activator" src="/assets/images/lady.jpg">
+           </div>
+           <div class="card-content">
+           <span class="card-title activator grey-text text-darken-4">{{tag.company}}</span>
+           <p><a href="#/design">Edit</a> &emsp; <a href="#/design">Get QRCode</a></p>
+           </div>
+           <div class="card-reveal">
+           <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+           <p>
+             <ul class="collection with-header" style="font-size:11px;">
+               <li class="collection-header"><h6>{{tag.name}}</h6></li>
+               <li class="collection-item">Age: {{tag.age}}</li>
+               <li class="collection-item">Email: {{tag.email}}</li>
+               <li class="collection-item">Phone: {{tag.phone}}</li>
+               <li class="collection-item">Gender: {{tag.gender}}</li>
+             </ul>
+           </p>
+           </div>
+       </div>
+      </div>
+
+
+    </div>
+</div>
